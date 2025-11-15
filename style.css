@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #212529;
+    background-color: lightblue;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+ul {
+    list-style: none;
+}
+header {
+    background: lightblue;
+    border-bottom: 1px solid green;
+    padding: 10px 0;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav li {
+    margin-left: 20px;
+}
+
+header nav a {
+    color: black;
+    font-weight: 100;
+    padding: 5px;
+}
+header nav a.active,
+header nav a:hover {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+.btn-primary {
+    background-color: rgb(13, 138, 157);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    
+}
+.btn-primary:hover {
+    background-color: rgb(37, 116, 201);
+}
+
+header nav, .btn-primary {
+    display: none;
+}
+
+.hero {
+    background-image: url(https://www.academics.pitt.edu/sites/default/files/styles/program_header/public/header-img/financelarge.jpg?h=bdb4a961&itok=BnZeTvpH);
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.btn-secondary {
+    background-color: lightslategrey;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.btn-secondary:hover {
+    background-color: rgb(37, 116, 201);
+}
+
+.features-preview {
+    padding: 50px 0;
+}
+
+.features-preview h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.feature-card {
+    border: 2px solid green;
+    border-radius: 8px;
+    padding: 25px;
+    background: rgb(238, 244, 244);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.feature-card p {
+    font-size: 0.95rem;
+}
+
+.feature-card a {
+    font-weight: 700;
+}
+
+.market-snapshot {
+    background-image: url(https://media.istockphoto.com/id/1365758819/photo/financial-and-business-background-for-stacking-of-money-coins-savings-and-accounts-finance.jpg?s=612x612&w=0&k=20&c=yKBXaQ3We_QucIVGnahT1aezx9NRs1UvCpXIriYe_Q0=);
+    padding: 50px 0;
+}
+
+.market-snapshot h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.market-snapshot table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background: rgb(238, 244, 244);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.market-snapshot th,
+.market-snapshot td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid green;
+}
+
+.market-snapshot th {
+    background-color:rgb(165, 229, 236);
+}
+
+.positive {
+    color: #28a745;
+    font-weight: 700;
+}
+.negative {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+.market-disclaimer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: black;
+}
+
+footer {
+    background: rgb(238, 244, 244);
+    color: black;
+    padding: 40px 0;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 30px;
+}
+
+footer h3, footer h4 {
+    color: black;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: lightseagreen;
+}
+
+footer ul {
+    margin-top: 10px;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: lightseagreen;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color: black;
+}
+
+@media (min-width: 768px) {
+    
+    h1 { font-size: 3rem; }
+    header nav, .btn-primary {
+        display: block;
+    }
+    .features-grid {
+        grid-template-columns: 1fr 1fr; 
+    }
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;  
+    gap: 8px;             
+    text-decoration: none;
+}
+.logo-text span {
+    font-weight: 500;
+}
+.logo img {
+    height: 100px;  
+    width: 200px;  
+    vertical-align: middle; 
+}
